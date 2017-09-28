@@ -1,0 +1,12 @@
+Deploying to JBoss Fuse
+----------------------
+To install in JBoss Fuse
+--------------------------
+<JBoss Fuse Home>/bin/fuse
+In JBoss Fuse Console
+
+karaf@root> features:install camel-jetty
+karaf@root> osgi:install -s mvn:com.fusesource.byexample.hellocamel/HelloCamel/1.0.0
+Once you've started the service - the '-s' option to osgi:install will start the bundle once installed - you can test using the standalone client
+
+mvn exec:java
